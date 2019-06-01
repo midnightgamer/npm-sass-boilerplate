@@ -1,0 +1,41 @@
+/*
+When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+*/
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+//For animation prefixes
+@mixin css3-prefix($prop, $value) {
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+    -o-#{$prop}: #{$value};
+    #{$prop}: #{$value};
+}
+
+/*
+USES
+div {
+   @include css3-prefix(transform, scale3d(2.5, 2, 1.5));
+*/
+
+
+//Vertical alignment
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/*
+Uses
+div {
+   @include vertical-center();
+}
+*/
+
