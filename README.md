@@ -35,3 +35,7 @@ npm start
 
 4. **build:css** :- Execute this script when you done with your project this script will simply perfom all taks that mentions in above 3 scripts
     
+    
+    ------------------
+
+    **Controbution accepted , feel free to controbutr in this boilerplate:blush:**
