@@ -9,6 +9,13 @@ The boilerplate includes npm, sass, autoprefixer, css compressor and npm builder
 [NodeJS](https://nodejs.org)
 
 
+### Features :star:
+------------------
+**1. Set of UI colors**
+**2. Most used mixin**
+**3. 7-in-1 folder strcture**
+**4. A live-server and sass watcher for smooth working**
+**5. Handy scripts**
 ### How to Start ? 
 ------------------
 ```
