@@ -7,7 +7,47 @@ When using ::before and ::after you'll always need these three, so we're saving 
     position: $pos;
 }
 
-//For animation prefixes
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+/*
+Uses
+
+// Define animation name, and properties
+@include keyframes(fade-out) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+// Add animation to element
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('fade-out 5s 3');
+}
+*/
+
+//For transform  prefixes
 @mixin css3-prefix($prop, $value) {
     -webkit-#{$prop}: #{$value};
     -moz-#{$prop}: #{$value};
