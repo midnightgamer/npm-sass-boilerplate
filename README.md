@@ -17,7 +17,7 @@ The boilerplate includes npm, sass, autoprefixer, css compressor and npm builder
 4. **A live-server and sass watcher for smooth working**
 5. **Handy scripts**
 #### How to Start ? 
----
+------------------
 ```
 Clone or download https://github.com/midnightgamer/sass-boilerplate.git
 cd sass-boilerplate
