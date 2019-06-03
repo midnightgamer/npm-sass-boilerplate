@@ -4,6 +4,7 @@
   "description": "This is advance sass-boilerplate with some basic folder stricture and some most used mixins and variables with handy script",
   "main": "index.js",
   "scripts": {
+    "test":"/Exit with Error code 0",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
