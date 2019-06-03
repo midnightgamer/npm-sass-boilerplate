@@ -16,7 +16,7 @@ The boilerplate includes npm, sass, autoprefixer, css compressor and npm builder
 3. **7-in-1 folder stricture**
 4. **A live-server and sass watcher for smooth working**
 5. **Handy scripts**
-6.**A Grid System based on flexbox**
+6. **A Grid System based on Flexbox**
 #### How to Start ? 
 ------------------
 ```
