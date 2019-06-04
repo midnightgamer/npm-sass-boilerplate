@@ -1,16 +1,11 @@
+@import "abstract/colors";
 @import "abstract/variables";
-@import "abstract/mixins.scss";
-
+@import "abstract/mixins";
 
 @import "base/base";
-@import "base/animation";
 @import "base/typography";
+@import "base/animation";
 @import "base/utilities";
-
-
-@import "components/form";
-
-
 
 @import "layout/grid";
 

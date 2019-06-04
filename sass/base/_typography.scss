@@ -1,0 +1,19 @@
+.heading-primary{
+    font-family: $font-family-heading;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 2rem;
+
+    span{
+        text-transform: lowercase;
+        color: $color-primary;
+    }
+
+    &--sub{
+        font-size: 2rem;
+        margin-top: 3rem;
+        font-family: $font-family-heading;
+    }
+}
