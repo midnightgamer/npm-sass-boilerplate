@@ -320,4 +320,8 @@ body {
     justify-content: space-around;
     height: 100%; }
   .section-hero .download {
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #291843;
+    padding-bottom: 4rem; }
