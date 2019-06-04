@@ -1,0 +1,33 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited{
+        text-decoration: none;
+        box-shadow: 0 1rem 4rem rgba($color-black, .4);
+        transition: all .4s;
+    }
+
+    &-block {
+        display: flex;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        align-items: center;
+        background-color: $color-black;
+        margin-right: 1rem;
+        padding: .5rem .8rem;
+        color: #e7e7e7;
+        border-radius: 5px;
+
+        i {
+            margin-right: .5rem;
+            color: currentColor;
+        }
+    }
+
+    &:hover{
+        transform: translateY(-.2rem);
+    }
+
+
+}
