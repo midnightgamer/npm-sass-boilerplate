@@ -6,7 +6,6 @@
 .section-hero{
     padding: 5rem 0;
     text-align: center;
-    height: 100vh;
     & .container{
         display: flex;
         flex-direction: column;
@@ -24,6 +23,15 @@
     }
 }
 
+.hero-img{
+    height: 100%;
+    overflow: hidden;
+
+    @include respond(tab-port){
+        width: 80%;
+        height: 60%;
+    }
+}
 .section-features{
     padding: 8rem 0;
 }

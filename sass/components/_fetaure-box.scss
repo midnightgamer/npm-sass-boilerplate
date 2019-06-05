@@ -1,17 +1,22 @@
 .feature-box{
-    padding: 4rem 3rem;
+    min-height: 29rem;
+    padding: 2rem 1rem;
     color: $color-primary;
     font-size: 1.6rem;
     border: 1px solid $color-grey-dark-2;
     border-radius: 3px;
     text-align: center;
     display: flex;
+    flex: 0 0 0;
     justify-content: space-between;
     flex-direction: column;
     transition: all .4s ease .1s;
-
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     margin-bottom: 3rem;
+
+    @media screen and (max-width: $bp-large) {
+        padding: 2rem 1rem;
+    }
     &__icon{
         display: flex;
         font-size: 4rem;

@@ -3,6 +3,14 @@ html{
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     transition: all .5s ease;
+
+    @include respond(tab-port){
+        font-size: 56.25%;
+    }
+
+    @include respond(phone){
+        font-size: 50%;
+    }
 }
 
 *{

@@ -1,0 +1,42 @@
+.footer{
+    padding: 3rem 0;
+    background-color: $color-secondary;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+        @include respond(tab-port){
+           justify-content: center;
+        }
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+    &__link{
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    &__text{
+        text-align: right;
+        font-family: $font-family-heading;
+        font-size: 1.6rem;
+        @include respond(tab-port){
+            text-align: center;
+        }
+    }
+    @include respond(tab-port){
+        .col-1-of-2{
+            margin-bottom: 2rem!important;
+        }
+    }
+}
