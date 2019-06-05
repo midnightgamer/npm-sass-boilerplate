@@ -14,3 +14,12 @@
         font-family: $font-family-heading;
     }
 }
+.heading-secondary{
+    font-family: $font-family-heading;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 4rem;
+    text-shadow: 0 1rem 4rem rgba($color-black,.3);
+}
