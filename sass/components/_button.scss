@@ -1,12 +1,37 @@
 .btn {
+    text-align: center;
 
     &,
     &:link,
-    &:visited{
+    &:visited {
         text-decoration: none;
         box-shadow: 0 1rem 4rem rgba($color-black, .4);
         transition: all .4s;
     }
+
+    &-primary {
+        display: inline-block;
+        padding: 1.2rem 1.6rem;
+        width: 300px;
+        color: $color-primary;
+        background-color: $color-secondary;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+
+        &--with-icon {
+            i {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+
+        &:hover{
+            background-color: $color-grey-light-1;
+            box-shadow: 0 2rem 4rem rgba($color-black, .4);
+            transform: translateY(-2px);
+        }
+    }
+
 
     &-block {
         display: flex;
@@ -23,10 +48,10 @@
             margin-right: .5rem;
             color: currentColor;
         }
-    }
 
-    &:hover{
-        transform: translateY(-.2rem);
+        &:hover {
+            transform: translateY(-.2rem);
+        }
     }
 
 

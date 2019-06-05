@@ -24,4 +24,34 @@
     }
 }
 
+.section-features{
+    padding: 8rem 0;
+}
 
+.section-version{
+    padding:6rem 0;
+    background-color: $color-primary;
+}
+
+.version{
+    color: $color-secondary;
+    font-family: $font-family-text;
+
+
+    &__list{
+        margin-left: 8rem;
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+    }
+    &__item{
+        font-size: 1.8rem;
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.whats-new-text{
+    font-size:2rem;
+    margin-bottom: 2rem;
+}

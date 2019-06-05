@@ -51,10 +51,13 @@ body {
   color: #291843; }
   .heading-primary span {
     text-transform: lowercase;
-    color: #291843; }
+    color: currentColor; }
   .heading-primary--sub {
     font-size: 2rem;
-    font-family: "Yatra One", cursive; }
+    font-family: "Yatra One", cursive;
+    margin: 2.5rem 0; }
+  .heading-primary--grey {
+    color: #F2F2F2; }
 
 .heading-secondary {
   font-family: "Yatra One", cursive;
@@ -65,27 +68,45 @@ body {
   margin-bottom: 4rem;
   text-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3); }
 
-.btn, .btn:link, .btn:visited {
-  text-decoration: none;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
-  transition: all .4s; }
+.u-text-center {
+  text-align: center !important; }
 
-.btn-block {
-  display: flex;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  align-items: center;
-  background-color: #000;
-  margin-right: 1rem;
-  padding: .5rem .8rem;
-  color: #e7e7e7;
-  border-radius: 5px; }
-  .btn-block i {
-    margin-right: .5rem;
-    color: currentColor; }
-
-.btn:hover {
-  transform: translateY(-0.2rem); }
+.btn {
+  text-align: center; }
+  .btn, .btn:link, .btn:visited {
+    text-decoration: none;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+    transition: all .4s; }
+  .btn-primary {
+    display: inline-block;
+    padding: 1.2rem 1.6rem;
+    width: 300px;
+    color: #291843;
+    background-color: #F2F2F2;
+    font-size: 2rem;
+    margin: 1.5rem 0; }
+    .btn-primary--with-icon i {
+      display: inline-block;
+      margin-right: 1rem; }
+    .btn-primary:hover {
+      background-color: #f9f7f6;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px); }
+  .btn-block {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    align-items: center;
+    background-color: #000;
+    margin-right: 1rem;
+    padding: .5rem .8rem;
+    color: #e7e7e7;
+    border-radius: 5px; }
+    .btn-block i {
+      margin-right: .5rem;
+      color: currentColor; }
+    .btn-block:hover {
+      transform: translateY(-0.2rem); }
 
 .feature-box {
   padding: 4rem 3rem;
@@ -371,3 +392,26 @@ body {
     width: 100%;
     border-bottom: 1px solid #291843;
     padding-bottom: 4rem; }
+
+.section-features {
+  padding: 8rem 0; }
+
+.section-version {
+  padding: 6rem 0;
+  background-color: #291843; }
+
+.version {
+  color: #F2F2F2;
+  font-family: "Barlow", sans-serif; }
+  .version__list {
+    margin-left: 8rem;
+    margin-bottom: 2rem;
+    padding: 2rem 0; }
+  .version__item {
+    font-size: 1.8rem; }
+    .version__item:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.whats-new-text {
+  font-size: 2rem;
+  margin-bottom: 2rem; }

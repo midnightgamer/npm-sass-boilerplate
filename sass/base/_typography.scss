@@ -6,12 +6,16 @@
     color: $color-primary;
     span{
         text-transform: lowercase;
-        color: $color-primary;
+        color: currentColor;
     }
 
     &--sub{
         font-size: 2rem;
         font-family: $font-family-heading;
+        margin : 2.5rem 0;
+    }
+    &--grey{
+        color: $color-secondary;
     }
 }
 .heading-secondary{
