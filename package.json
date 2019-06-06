@@ -4,15 +4,18 @@
   "description": "This is advance sass-boilerplate with some basic folder stricture and some most used mixins and variables with handy script",
   "main": "index.js",
   "scripts": {
-    "test":"/Exit with Error code 0",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
 
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "make:dir": "node script.js",
+    "compress:css": "node-sass css/style.prefix.css src/style.min.css --output-style compressed",
+
+
+    "build": "npm-run-all compile:sass prefix:css make:dir compress:css "
+
   },
   "repository": {
     "type": "git",
