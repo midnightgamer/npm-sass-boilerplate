@@ -1,11 +1,4 @@
-@mixin clearFix{
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
+//Variables for grid
 $grid-width:114rem;
 $gutter-vertical:8rem;
 $gutter-vertical-small:6rem;
@@ -87,10 +80,11 @@ $gutter-horizontal:6rem;
     }
 }
 
+//Grid ended
 
 
 /*
-When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+Use for pseudo code
 */
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
@@ -98,6 +92,7 @@ When using ::before and ::after you'll always need these three, so we're saving 
     position: $pos;
 }
 
+/*Uses for keyframe*/
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -115,30 +110,15 @@ When using ::before and ::after you'll always need these three, so we're saving 
         @content;
     }
 }
+
+/*Uses for animation*/
 @mixin animation($str) {
     -webkit-animation: #{$str};
     -moz-animation: #{$str};
     -o-animation: #{$str};
     animation: #{$str};
 }
-/*
-Uses
-
-// Define animation name, and properties
-@include keyframes(fade-out) {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-}
-// Add animation to element
-.element {
-  width: 100px;
-  height: 100px;
-  background: black;
-  @include animation('fade-out 5s 3');
-}
-*/
-
-//For transform  prefixes
+/*CSS PREFIX*/
 @mixin css3-prefix($prop, $value) {
     -webkit-#{$prop}: #{$value};
     -moz-#{$prop}: #{$value};
@@ -146,15 +126,7 @@ Uses
     -o-#{$prop}: #{$value};
     #{$prop}: #{$value};
 }
-
-/*
-USES
-div {
-   @include css3-prefix(transform, scale3d(2.5, 2, 1.5));
-*/
-
-
-//Vertical alignment
+/*Center content vertically*/
 @mixin vertical-center {
     position: relative;
     top: 50%;
@@ -162,11 +134,3 @@ div {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
-/*
-Uses
-div {
-   @include vertical-center();
-}
-*/
-
