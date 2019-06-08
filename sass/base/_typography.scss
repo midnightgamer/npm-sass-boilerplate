@@ -26,4 +26,10 @@
     color: $color-primary;
     margin-bottom: 4rem;
     text-shadow: 0 1rem 4rem rgba($color-black,.3);
+
+    &--small{
+        font-size: 1.6rem !important;
+        font-family: $font-family-text;
+        font-weight: 400;
+    }
 }
