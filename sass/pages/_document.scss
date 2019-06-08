@@ -1,0 +1,41 @@
+.header {
+    background-color: $color-primary;
+    width: 100%;
+
+    &__list{
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+    }
+
+    &__item{
+        align-items: center;
+        padding: 1.5rem 2rem;
+        &--logo{
+            margin-right: auto;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            text-decoration: none;
+            font-size: $default-font-size;
+            text-transform: uppercase;
+            font-family: $font-family-heading;
+            color: $color-secondary;
+            transition: all .5s ease;
+        }
+
+        i{
+            font-size: 1.6rem;
+            color: $color-secondary;
+            transition: all .5s ease;
+        }
+        &:hover,
+        &:focus,
+        &:hover i{
+            color: transparentize($color-secondary,0.6);
+        }
+    }
+}
