@@ -1,8 +1,11 @@
-.heading-primary{
+[class ^="heading"]{
     font-family: $font-family-heading;
+    text-transform: uppercase;
+}
+
+.heading-primary{
     font-size: 3rem;
     text-align: center;
-    text-transform: uppercase;
     color: $color-primary;
     span{
         text-transform: lowercase;
@@ -19,7 +22,6 @@
     }
 }
 .heading-secondary{
-    font-family: $font-family-heading;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
@@ -32,4 +34,8 @@
         font-family: $font-family-text;
         font-weight: 400;
     }
+}
+
+.heading-tertiary{
+    font-size: 2rem;
 }

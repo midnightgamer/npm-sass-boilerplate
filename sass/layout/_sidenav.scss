@@ -1,7 +1,40 @@
 .sidenav{
-    position: relative;
-    width: 15%;
-    height: 100%;
+    position:-webkit-sticky;
+    position:sticky;
+    top: 0;
+    max-height: fit-content;
+    width: 20%;
+    padding: 0 1rem;
+    &__list{
+        list-style: none;
+        margin: 1rem 0 0 0;
+    }
+
+    &__item{
+        margin: 0 0 1rem 0;
+    }
+
+    &__link{
+        text-transform: uppercase;
+        font-family: $font-family-text;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: .8rem .6rem;
+        color: $color-primary;
+        width: 100%;
+        display: inline-block;
+        transition: background-color .3s ease ,transform .4s ease .2s;
+        &:hover{
+            background-color: #e7e7e7;
+            border-radius: 3px;
+            transform: translateX(4px);
+        }
+    }
+}
+
+
+/*
+.sidenav{
     &__list{
         display: flex;
         flex-direction: column;
@@ -66,4 +99,4 @@
 
 .item-with-in-foot{
     margin-top: auto;
-}
+}*/

@@ -66,11 +66,13 @@ body {
   background-color: #F2F2F2;
   height: 100vh; }
 
-.heading-primary {
+[class^="heading"] {
   font-family: "Yatra One", cursive;
+  text-transform: uppercase; }
+
+.heading-primary {
   font-size: 3rem;
   text-align: center;
-  text-transform: uppercase;
   color: #291843; }
   .heading-primary span {
     text-transform: lowercase;
@@ -83,7 +85,6 @@ body {
     color: #F2F2F2; }
 
 .heading-secondary {
-  font-family: "Yatra One", cursive;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -94,6 +95,9 @@ body {
     font-size: 1.6rem !important;
     font-family: "Barlow", sans-serif;
     font-weight: 400; }
+
+.heading-tertiary {
+  font-size: 2rem; }
 
 .u-text-center {
   text-align: center !important; }
@@ -250,54 +254,99 @@ body {
       margin-bottom: 2rem !important; } }
 
 .sidenav {
-  position: relative;
-  width: 15%;
-  height: 100%; }
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-height: fit-content;
+  width: 20%;
+  padding: 0 1rem; }
   .sidenav__list {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100vh;
-    width: inherit;
-    padding-top: 2rem;
     list-style: none;
-    border-right: 1px solid rgba(109, 93, 75, 0.1); }
+    margin: 1rem 0 0 0; }
+  .sidenav__item {
+    margin: 0 0 1rem 0; }
   .sidenav__link {
-    text-align: right;
-    text-decoration: none;
-    font-size: 1.6rem;
+    text-transform: uppercase;
     font-family: "Barlow", sans-serif;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    padding: 0 2rem 1.5rem 0;
-    color: #000;
-    transition: all .3s ease  , transform .5s ease  .3s; }
-    .sidenav__link i {
-      margin-right: .7rem; }
-    .sidenav__link:hover {
-      color: #291843;
-      transform: translateX(4px); }
-  .sidenav__download {
-    display: inline-block;
-    margin-top: .8rem;
-    color: #000;
+    font-size: 1.4rem;
     text-decoration: none;
-    font-weight: 700;
-    transition: all 0.4s cubic-bezier(1, 0, 0, 1); }
-    .sidenav__download:after {
-      content: "";
-      display: block;
-      width: 0px;
-      margin-top: .8rem;
-      border-bottom: 1px solid #000;
-      transition: all 0.4s cubic-bezier(1, 0, 0, 1); }
-    .sidenav__download:hover:after {
-      width: 100%; }
+    padding: .8rem .6rem;
+    color: #291843;
+    width: 100%;
+    display: inline-block;
+    transition: background-color .3s ease ,transform .4s ease .2s; }
+    .sidenav__link:hover {
+      background-color: #e7e7e7;
+      border-radius: 3px;
+      transform: translateX(4px); }
 
-.item-with-in-foot {
-  margin-top: auto; }
+/*
+.sidenav{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        width: inherit;
+        padding-top: 2rem;
+        list-style: none;
+        border-right: 1px solid transparentize($color-grey-dark-5,.9);
 
+    }
+
+    &__item{
+
+    }
+
+    &__link{
+        text-align: right;
+        text-decoration: none;
+        font-size: $default-font-size;
+        font-family: $font-family-text;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+       padding: 0 2rem 1.5rem 0;
+        color: $color-black;
+        transition: all .3s ease  , transform .5s ease  .3s;
+         i{
+             margin-right: .7rem;
+
+         }
+        &:hover{
+            color: $color-primary;
+            transform: translateX(4px);
+        }
+
+    }
+
+    &__download{
+        display: inline-block;
+        margin-top: .8rem;
+        color: $color-black;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all .4s cubic-bezier(1,0,0,1);
+        &:after{
+            content: "";
+            display: block;
+            width: 0px;
+            margin-top: .8rem;
+            border-bottom: 1px solid $color-black;
+            transition: all .4s cubic-bezier(1,0,0,1);
+        }
+
+        &:hover{
+            &:after{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.item-with-in-foot{
+    margin-top: auto;
+}*/
 .container {
   max-width: 120rem;
   margin: 0 auto; }
@@ -376,3 +425,11 @@ body {
   .header__link:hover, .header__link:focus,
   .header__link:hover i {
     color: rgba(242, 242, 242, 0.4); }
+
+.row-flex {
+  display: flex; }
+
+main {
+  background-color: #2998ff;
+  width: 100%;
+  height: 200vh; }
