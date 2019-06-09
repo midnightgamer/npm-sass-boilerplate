@@ -52,27 +52,29 @@
     .code{
         position: relative;
     }
-    code{
+    code,
+    .folder-stature{
         display: inline-block;
-        margin: 1rem 0;
         font-size: 1.4rem;
         background-color: #e7e7e7;
         padding: 1rem 4rem 1rem 1rem;
         border-radius: 3px;
         transform: translateX(2rem);
         margin-left: -2rem;
-
+        margin-bottom: 2rem;
         &::selection{
             background: transparent;
         }
-
     }
-
+    .folder-stature{
+        line-height: 120%;
+        width: 80%;
+    }
     button{
         border: none;
         background: transparent;
         position: absolute;
-        top: 2rem;
+        top: 1rem;
         font-size: 1.4rem;
         cursor: pointer;
 
@@ -80,5 +82,20 @@
             background-color: #e7e7e7;
         }
     }
+
+     ul {
+        list-style: none;
+
+         & li{
+            font-size: 1.3rem;
+             font-family: $font-family-text;
+         }
+         code{
+             padding: 1rem;
+             font-size: 1.4rem;
+             margin-right: 2rem;
+             color: $color-primary;
+         }
+     }
 }
 

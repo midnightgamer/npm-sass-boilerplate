@@ -57,24 +57,123 @@
                 those Sass
                 files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibility.
             </p>
-
             <p class="paragraph">
                 Clone or download the boilerplate
             </p>
             <div class="code">
-                <code  id="code1">
+                <code id="code1">
                     git clone https://github.com/midnightgamer/sass-boilerplate.git
                 </code>
                 <button onclick="copyToClipboard('code1')">
-                    <i  class="lni-clipboard"></i>
+                    <i class="lni-clipboard"></i>
                 </button>
             </div>
+            <p class="paragraph">
+                Install all development dependencies
+            </p>
+            <div class="code">
+                <code id="code2">
+                    npm i
+                </code>
+                <button onclick="copyToClipboard('code2')">
+                    <i class="lni-clipboard"></i>
+                </button>
+            </div>
+            <p class="paragraph">
+                Start a dev live-server and watch on all of your sass file
+            </p>
+            <div class="code">
+                <code id="code3">
+                    npm start
+                </code>
+                <button onclick="copyToClipboard('code3')">
+                    <i class="lni-clipboard"></i>
+                </button>
+            </div>
+            <h4 class="heading--4">
+                Directory Structure
+            </h4>
+            <p class="paragraph">
+                The project contains the a very big folder structure , first of all 7-in-1 structure of sass , css
+                for author stylesheet and vendor for third party files.
+            </p>
+            <p class="paragraph">
+                After Building the project we got a whole new folder named src with compiled css and required files
+                in there so dont have to bather about sass file while publishing.
+            </p>
+            <div class="folder-stature">
+                <pre>
+project-folder
+├── css/
+│   ├── style.css
+├── js/
+│   └── script.js
+├── images/
+│   └── favicon.png
+├── index.html
+|── sass/
+    |── abstract/
+    │    |── _variables.scss
+    │    |── _mixins.scss
+    │    └── _colors.scss
+    ├── base/
+    │   ├── _base.scss
+    │   ├── _typography.scss
+    │   ├── _animation.scss
+    │   └── _utilities.scss
+    └── components/
+    │    ├── _tooltip.scss
+    │    └── _form.scss
+    └── layout
+    │     └──_grid.scss
+    │
+    └── Pages
+    │       └──_home.scss
+    └── vendors
+    │       └──_anyVendorFile.scss
+    └── theme
+    │       └──_anyDarkTheme.scss
+    └── main.scss
+.gitignore
+README.md
+package.json
+</pre>
+            </div>
+            <h5 class="heading--5">
+                Description about sass folders
+            </h5>
+            <ul>
+                <li>
+                    <code>abstract/</code> -  contains global mixins, functions, helper selectors, etc.
+                </li>
+                <li>
+                    <code>base/</code> - contains global styles, such as resets, typography, colors, etc.
+                </li>
+                <li>
+                    <code>components/</code> -  contains each self-contained component in its own .scss partial
+                </li>
+                <li>
+                    <code>layout/</code> -   contains styling for larger layout components; e.g. nav, header, footer, etc.
+                </li>
+                <li>
+                    <code>pages/</code> -  contains page-specific styling, if necessary
+                </li>
+                <li>
+                    <code>themes/</code> -   contains styling for different themes
+                </li>
+                <li>
+                    <code>vendors/</code> -  contains 3rd-party styles, mixins, etc.
+                </li>
+                <li>
+                    <code>main.scss</code> -  output file that brings together all of the above parts
+                </li>
+            </ul>
         </section>
     </main>
 </div>
-  <div class="tooltip">
-      Code copied!
-  </div>
-<script  src="script.js"></script>
+<div class="tooltip">
+    Code copied!
+</div>
+<script src="script.js"></script>
 </body>
 </html>

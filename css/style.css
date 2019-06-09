@@ -103,11 +103,17 @@ body {
 .paragraph {
   font-family: "Barlow", sans-serif;
   font-size: 1.4rem;
-  margin-bottom: 1rem; }
+  margin: 1.5rem 0 .8rem 0; }
 
 .heading--4 {
   font-family: "Barlow", sans-serif;
   font-size: 1.4rem;
+  color: #291843;
+  margin: 1.5rem 0; }
+
+.heading--5 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
   color: #291843;
   margin: 1.5rem 0; }
 
@@ -405,23 +411,38 @@ body {
   padding: 1rem 2rem; }
   .section-how-to-start .code {
     position: relative; }
-  .section-how-to-start code {
+  .section-how-to-start code,
+  .section-how-to-start .folder-stature {
     display: inline-block;
-    margin: 1rem 0;
     font-size: 1.4rem;
     background-color: #e7e7e7;
     padding: 1rem 4rem 1rem 1rem;
     border-radius: 3px;
     transform: translateX(2rem);
-    margin-left: -2rem; }
-    .section-how-to-start code::selection {
+    margin-left: -2rem;
+    margin-bottom: 2rem; }
+    .section-how-to-start code::selection,
+    .section-how-to-start .folder-stature::selection {
       background: transparent; }
+  .section-how-to-start .folder-stature {
+    line-height: 120%;
+    width: 80%; }
   .section-how-to-start button {
     border: none;
     background: transparent;
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     font-size: 1.4rem;
     cursor: pointer; }
     .section-how-to-start button:hover {
       background-color: #e7e7e7; }
+  .section-how-to-start ul {
+    list-style: none; }
+    .section-how-to-start ul li {
+      font-size: 1.3rem;
+      font-family: "Barlow", sans-serif; }
+    .section-how-to-start ul code {
+      padding: 1rem;
+      font-size: 1.4rem;
+      margin-right: 2rem;
+      color: #291843; }
