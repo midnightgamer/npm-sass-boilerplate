@@ -1,22 +1,19 @@
 .sidenav{
     position: relative;
-    width: 15%;
+    width: 12%;
+
 
     &__list{
         display: flex;
         flex-direction: column;
         position: fixed;
         width: inherit;
-        background-color:$color-grey-light-4;
         height: 100vh;
-        padding: 1rem 2rem 6rem 2rem;
         list-style: none;
+        border-right: 1px solid $color-grey-dark-5;
     }
 
     &__item{
-        border-bottom: solid $color-black 1px;
-        margin-bottom: 1rem;
-
 
     }
 
@@ -36,7 +33,7 @@
 
          }
         &:hover{
-            color: $color-grey-light-3;
+            color: $color-primary;
             transform: translateX(4px);
         }
 

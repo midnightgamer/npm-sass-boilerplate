@@ -251,19 +251,15 @@ body {
 
 .sidenav {
   position: relative;
-  width: 15%; }
+  width: 12%; }
   .sidenav__list {
     display: flex;
     flex-direction: column;
     position: fixed;
     width: inherit;
-    background-color: #aaa;
     height: 100vh;
-    padding: 1rem 2rem 6rem 2rem;
-    list-style: none; }
-  .sidenav__item {
-    border-bottom: solid #000 1px;
-    margin-bottom: 1rem; }
+    list-style: none;
+    border-right: 1px solid #6D5D4B; }
   .sidenav__link {
     text-decoration: none;
     font-size: 1.6rem;
@@ -278,7 +274,7 @@ body {
     .sidenav__link i {
       margin-right: .7rem; }
     .sidenav__link:hover {
-      color: #eee;
+      color: #291843;
       transform: translateX(4px); }
   .sidenav__download {
     display: inline-block;
