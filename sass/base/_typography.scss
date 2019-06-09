@@ -38,4 +38,19 @@
 
 .heading-tertiary{
     font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.paragraph{
+    font-family: $font-family-text;
+    font-size: 1.4rem;
+
+    margin-bottom: 1rem;
+}
+
+.heading--4{
+    font-family: $font-family-text;
+    font-size: 1.4rem;
+    color: $color-primary;
+    margin: 1.5rem 0;
 }
