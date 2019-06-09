@@ -1,0 +1,12 @@
+@keyframes moveInUp {
+    0%{
+        transform: translateY(10rem);
+    }
+    80%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}

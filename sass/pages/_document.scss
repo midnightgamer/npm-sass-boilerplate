@@ -49,14 +49,36 @@
 
 .section-how-to-start{
     padding: 1rem 2rem;
-
+    .code{
+        position: relative;
+    }
     code{
         display: inline-block;
         margin: 1rem 0;
         font-size: 1.4rem;
         background-color: #e7e7e7;
-        padding: 1rem .8rem;
+        padding: 1rem 4rem 1rem 1rem;
         border-radius: 3px;
+        transform: translateX(2rem);
+        margin-left: -2rem;
+
+        &::selection{
+            background: transparent;
+        }
+
+    }
+
+    button{
+        border: none;
+        background: transparent;
+        position: absolute;
+        top: 2rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #e7e7e7;
+        }
     }
 }
 

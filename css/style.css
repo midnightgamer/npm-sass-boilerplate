@@ -111,8 +111,20 @@ body {
   color: #291843;
   margin: 1.5rem 0; }
 
+@keyframes moveInUp {
+  0% {
+    transform: translateY(10rem); }
+  80% {
+    transform: translateY(-1rem); }
+  100% {
+    transform: translateY(0); } }
+
 .u-text-center {
   text-align: center !important; }
+
+.u-disappear {
+  opacity: 0;
+  visibility: hidden; }
 
 .btn {
   text-align: center; }
@@ -192,6 +204,21 @@ body {
     font-size: 1.6rem; }
   .feature-box:hover {
     background-color: #f7f7f7; }
+
+.tooltip {
+  background-color: #000;
+  color: #F2F2F2;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-family: "Barlow", sans-serif;
+  display: inline-block;
+  border-radius: 3px;
+  transition: all .5s ease;
+  position: absolute;
+  right: 10rem;
+  bottom: 16rem;
+  animation: moveInUp 1s ease;
+  display: none; }
 
 .row {
   max-width: 114rem;
@@ -376,10 +403,25 @@ body {
 
 .section-how-to-start {
   padding: 1rem 2rem; }
+  .section-how-to-start .code {
+    position: relative; }
   .section-how-to-start code {
     display: inline-block;
     margin: 1rem 0;
     font-size: 1.4rem;
     background-color: #e7e7e7;
-    padding: 1rem .8rem;
-    border-radius: 3px; }
+    padding: 1rem 4rem 1rem 1rem;
+    border-radius: 3px;
+    transform: translateX(2rem);
+    margin-left: -2rem; }
+    .section-how-to-start code::selection {
+      background: transparent; }
+  .section-how-to-start button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 2rem;
+    font-size: 1.4rem;
+    cursor: pointer; }
+    .section-how-to-start button:hover {
+      background-color: #e7e7e7; }

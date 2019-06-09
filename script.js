@@ -10,6 +10,10 @@ function copyToClipboard(el) {
         var successful = document.execCommand('copy');
         var msg = successful ? 'successful' : 'unsuccessful';
         console.log('Copy command was ' + msg);
+        document.querySelector('.tooltip').style.display = 'block';
+        setTimeout(function () {
+            document.querySelector('.tooltip').classList.add('u-disappear')
+        },2000)
     } catch(err) {
         console.log('Oops, unable to copy');
     }
