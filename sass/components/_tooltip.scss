@@ -1,0 +1,16 @@
+.tooltip{
+    background-color: $color-black;
+    color: $color-secondary;
+    padding: 1rem 1.5rem;
+    font-size: $default-font-size;
+    font-family: $font-family-text;
+    display: inline-block;
+    border-radius: 3px;
+    transition: all .5s ease;
+    position: absolute;
+    right: 10rem;
+    bottom: 16rem;
+    animation: moveInUp 1s ease;
+    display: none;
+}
+
