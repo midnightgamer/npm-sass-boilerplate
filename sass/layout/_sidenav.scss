@@ -1,16 +1,17 @@
 .sidenav{
     position: relative;
-    width: 12%;
-
-
+    width: 15%;
+    height: 100%;
     &__list{
         display: flex;
         flex-direction: column;
         position: fixed;
-        width: inherit;
         height: 100vh;
+        width: inherit;
+        padding-top: 2rem;
         list-style: none;
-        border-right: 1px solid $color-grey-dark-5;
+        border-right: 1px solid transparentize($color-grey-dark-5,.9);
+
     }
 
     &__item{
@@ -18,14 +19,14 @@
     }
 
     &__link{
+        text-align: right;
         text-decoration: none;
         font-size: $default-font-size;
         font-family: $font-family-text;
         display: inline-block;
         height: 100%;
-        padding: 1rem 0;
         width: 100%;
-        text-align: left;
+       padding: 0 2rem 1.5rem 0;
         color: $color-black;
         transition: all .3s ease  , transform .5s ease  .3s;
          i{
