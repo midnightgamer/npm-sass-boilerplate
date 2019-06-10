@@ -103,11 +103,13 @@ body {
 .paragraph {
   font-family: "Barlow", sans-serif;
   font-size: 1.4rem;
-  margin: 1.5rem 0 .8rem 0; }
+  margin: 1.5rem 0 .8rem 0;
+  font-weight: 400; }
 
 .heading--4 {
   font-family: "Barlow", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #291843;
   margin: 1.5rem 0; }
 
@@ -449,3 +451,31 @@ code,
     font-size: 1.4rem;
     margin-right: 2rem;
     color: #291843; }
+
+.language-html code[class*="language-"],
+.language-html pre[class*="language-"] {
+  color: #343434;
+  direction: ltr;
+  font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  text-shadow: none;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-size: 14px;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+.language-html .token.tag {
+  color: #1E6BD6; }
+
+.language-html .token.attr-value {
+  color: #00b29c; }

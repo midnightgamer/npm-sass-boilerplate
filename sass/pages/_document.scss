@@ -105,3 +105,39 @@ code,
     }
 }
 
+.language-html{
+    code[class*="language-"],
+    pre[class*="language-"] {
+        color: #343434;
+        direction: ltr;
+        font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        text-align: left;
+        text-shadow: none;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        -moz-tab-size: 2;
+        -o-tab-size: 2;
+        tab-size: 2;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        font-size: 14px;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+
+    .token.tag {
+        color: #1E6BD6;
+    }
+
+    .token.attr-value {
+        color: #00b29c;
+    }
+}
+
+
+
