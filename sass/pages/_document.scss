@@ -104,40 +104,28 @@ code,
         }
     }
 }
-
 .language-html{
-    code[class*="language-"],
-    pre[class*="language-"] {
-        color: #343434;
-        direction: ltr;
-        font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-        text-align: left;
-        text-shadow: none;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.5;
-        -moz-tab-size: 2;
-        -o-tab-size: 2;
-        tab-size: 2;
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-        font-size: 14px;
-        -webkit-font-smoothing: subpixel-antialiased;
-    }
-
-
-    .token.tag {
-        color: #1E6BD6;
-    }
-
-    .token.attr-value {
-        color: #00b29c;
-    }
+    font-size: 1.6rem;
+    width: 80%;
+    padding: 1rem 2rem;
+    line-height: 150%;
+}
+.token.tag {
+    color: #1E6BD6;
 }
 
+.token.attr-value {
+    color: #00b29c;
+}
+
+.grid-demo{
+    margin-bottom: 2rem!important;
+    [class^=col]{
+        border: 1px solid #2998ff;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        font-family: $font-family-text;
+    }
+}
 
 

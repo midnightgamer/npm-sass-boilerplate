@@ -455,30 +455,22 @@ code,
     margin-right: 2rem;
     color: #291843; }
 
-.language-html code[class*="language-"],
-.language-html pre[class*="language-"] {
-  color: #343434;
-  direction: ltr;
-  font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
-  text-shadow: none;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  font-size: 14px;
-  -webkit-font-smoothing: subpixel-antialiased; }
+.language-html {
+  font-size: 1.6rem;
+  width: 80%;
+  padding: 1rem 2rem;
+  line-height: 150%; }
 
-.language-html .token.tag {
+.token.tag {
   color: #1E6BD6; }
 
-.language-html .token.attr-value {
+.token.attr-value {
   color: #00b29c; }
+
+.grid-demo {
+  margin-bottom: 2rem !important; }
+  .grid-demo [class^=col] {
+    border: 1px solid #2998ff;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    font-family: "Barlow", sans-serif; }
