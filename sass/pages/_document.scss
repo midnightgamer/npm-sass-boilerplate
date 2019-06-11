@@ -134,16 +134,21 @@ code,
     .mixin{
 
         &__list{
-
+            margin-left: 2rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: $font-family-text;
         }
         &__item{
-
+            &:not(:last-child){
+                margin-bottom: 4rem;
+            }
         }
         &__heading{
 
         }
         &__text{
-
+            margin-bottom: 1rem;
         }
         &__code{
             padding: .3rem .6rem;

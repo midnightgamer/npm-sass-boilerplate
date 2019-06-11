@@ -26,6 +26,9 @@ body {
   background-color: #F2F2F2;
   height: 100vh; }
 
+main {
+  padding: 0 2rem; }
+
 [class^="heading"] {
   font-family: "Yatra One", cursive;
   text-transform: uppercase; }
@@ -434,6 +437,18 @@ code,
     padding: 1rem 2rem;
     font-size: 1.4rem;
     font-family: "Barlow", sans-serif; }
+
+.section-mixins .mixin__list {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Barlow", sans-serif; }
+
+.section-mixins .mixin__item:not(:last-child) {
+  margin-bottom: 4rem; }
+
+.section-mixins .mixin__text {
+  margin-bottom: 1rem; }
 
 .section-mixins .mixin__code {
   padding: .3rem .6rem;
