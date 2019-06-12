@@ -9,7 +9,8 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  scroll-behavior: smooth; }
   @media screen and (max-width: 56.25rem) {
     html {
       font-size: 56.25%; } }
@@ -308,6 +309,11 @@ main {
       background-color: #e7e7e7;
       border-radius: 3px;
       transform: translateX(4px); }
+
+.active {
+  background-color: #e7e7e7;
+  border-radius: 3px;
+  transform: translateX(4px); }
 
 .container {
   max-width: 120rem;

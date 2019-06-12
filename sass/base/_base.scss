@@ -3,7 +3,7 @@ html{
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     transition: all .5s ease;
-
+    scroll-behavior: smooth;
     @include respond(tab-port){
         font-size: 56.25%;
     }

@@ -12,22 +12,22 @@
 </head>
 <body>
 <div class="row row-flex">
-    <aside class="sidenav">
+    <nav class="sidenav" id="side-nav">
         <ul class="sidenav__list">
             <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
+                <a href="#section-getting-start" class="sidenav__link active">
                     <i class="lni-bolt-alt"></i>
                     Getting Started
                 </a>
             </li>
             <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
+                <a href="#folder" class="sidenav__link">
                     <i class="lni-folder"></i>
                     Folder Architecture
                 </a>
             </li>
             <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
+                <a href="#grid" class="sidenav__link">
                     <i class="lni-grid-alt"></i>
                     Grid
                 </a>
@@ -39,27 +39,27 @@
             <!--                </a>-->
             <!--            </li>-->
             <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
+                <a href="#mixins" class="sidenav__link">
                     <i class="lni-star"></i>
                     Mixins
                 </a>
             </li>
             <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
+                <a href="#scripts" class="sidenav__link">
                     <i class="lni-code"></i>
                     npm Scripts
                 </a>
             </li>
-            <li class="sidenav__item">
-                <a href="#" class="sidenav__link">
-                    <i class="lni-dollar"></i>
-                    Sass Variables
-                </a>
-            </li>
+<!--            <li class="sidenav__item">-->
+<!--                <a href="#" class="sidenav__link">-->
+<!--                    <i class="lni-dollar"></i>-->
+<!--                    Sass Variables-->
+<!--                </a>-->
+<!--            </li>-->
         </ul>
-    </aside>
+    </nav>
     <main>
-        <section class="section-how-to-start">
+        <section class="section-how-to-start" id="section-getting-start">
             <h2 class="heading-tertiary">
                 Getting Started
             </h2>
@@ -103,7 +103,7 @@
                 </button>
             </div>
         </section>
-        <section class="section-folder-structure">
+        <section class="section-folder-structure" id="folder">
             <h4 class="heading--4">
                 Directory Structure
             </h4>
@@ -184,7 +184,7 @@ package.json
             </ul>
 
         </section>
-        <section class="section-grid">
+        <section class="section-grid" id="grid">
             <h4 class="heading-tertiary">
                 Grid
             </h4>
@@ -325,7 +325,7 @@ package.json
                 <div class="col-1-of-4">col-1-of-4</div>
             </div>
         </section>
-        <section class="section-mixins">
+        <section class="section-mixins" id="mixins">
             <h3 class="heading-tertiary">Mixins</h3>
             <p class="paragraph">
                 One of the most powerful features of the CSS preprocessor Sass is the mixin, an abstraction of a common
@@ -387,7 +387,7 @@ package.json
                 </li>
             </ol>
         </section>
-        <section class="section-scripts">
+        <section class="section-scripts" id="scripts">
             <h3 class="heading-tertiary">
                 Npm Scripts
             </h3>
@@ -487,6 +487,10 @@ package.json
 <div class="tooltip">
     Code copied!
 </div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
 </html>
