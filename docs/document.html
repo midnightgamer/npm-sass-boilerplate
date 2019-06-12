@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500|Yatra+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="row row-flex">
+    <nav class="sidenav" id="side-nav">
+        <ul class="sidenav__list">
+            <li class="sidenav__item">
+                <a href="#section-getting-start" class="sidenav__link active">
+                    <i class="lni-bolt-alt"></i>
+                    Getting Started
+                </a>
+            </li>
+            <li class="sidenav__item">
+                <a href="#folder" class="sidenav__link">
+                    <i class="lni-folder"></i>
+                    Folder Architecture
+                </a>
+            </li>
+            <li class="sidenav__item">
+                <a href="#grid" class="sidenav__link">
+                    <i class="lni-grid-alt"></i>
+                    Grid
+                </a>
+            </li>
+            <!--            <li class="sidenav__item">-->
+            <!--                <a href="#" class="sidenav__link">-->
+            <!--                    <i class="lni-direction-alt"></i>-->
+            <!--                    Helpers-->
+            <!--                </a>-->
+            <!--            </li>-->
+            <li class="sidenav__item">
+                <a href="#mixins" class="sidenav__link">
+                    <i class="lni-star"></i>
+                    Mixins
+                </a>
+            </li>
+            <li class="sidenav__item">
+                <a href="#scripts" class="sidenav__link">
+                    <i class="lni-code"></i>
+                    npm Scripts
+                </a>
+            </li>
+        </ul>
+        <div class="nav-trigger-container">
+            <a href="!#" class="navigation-toggler">
+                <span class="toogle-btn"></span>
+            </a>
+        </div>
+    </nav>
+    <main>
+       <section class="section-hero">
+           <div class="row">
+               <h1 class="heading-primary heading-primary--grey">
+                   Sass-boilerplate
+               </h1>
+               <p class="heading-primary--sub">
+                   sass is awesome
+               </p>
+           </div>
+       </section>
+        <section class="section-how-to-start" id="section-getting-start">
+            <h2 class="heading-tertiary">
+                Getting Started
+            </h2>
+            <p class="paragraph">
+                Sass is used to extend your CSS, allowing you to use useful concepts like variables and nesting, as well
+                as compartmentalizing and organizing the code. Npm is used to watch for changes and process
+                those Sass
+                files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibility.
+            </p>
+            <p class="paragraph">
+                Clone or download the boilerplate
+            </p>
+            <div class="code">
+                <code id="code1">
+                    git clone https://github.com/midnightgamer/sass-boilerplate.git
+                </code>
+                <button onclick="copyToClipboard('code1')">
+                    <i class="lni-clipboard"></i>
+                </button>
+            </div>
+            <p class="paragraph">
+                Install all development dependencies
+            </p>
+            <div class="code">
+                <code id="code2">
+                    npm i
+                </code>
+                <button onclick="copyToClipboard('code2')">
+                    <i class="lni-clipboard"></i>
+                </button>
+            </div>
+            <p class="paragraph">
+                Start a dev live-server and watch on all of your sass file
+            </p>
+            <div class="code">
+                <code id="code3">
+                    npm start
+                </code>
+                <button onclick="copyToClipboard('code3')">
+                    <i class="lni-clipboard"></i>
+                </button>
+            </div>
+        </section>
+        <section class="section-folder-structure" id="folder">
+            <h4 class="heading--4">
+                Directory Structure
+            </h4>
+            <p class="paragraph">
+                The project contains the a very big folder structure , first of all 7-in-1 structure of sass , css
+                for author stylesheet and vendor for third party files.
+            </p>
+            <p class="paragraph">
+                After Building the project we got a whole new folder named src with compiled css and required files
+                in there so dont have to bather about sass file while publishing.
+            </p>
+            <div class="folder-stature">
+                <pre>
+project-folder
+├── css/
+│   ├── style.css
+├── js/
+│   └── script.js
+├── images/
+│   └── favicon.png
+├── index.html
+|── sass/
+    |── abstract/
+    │    |── _variables.scss
+    │    |── _mixins.scss
+    │    └── _colors.scss
+    ├── base/
+    │   ├── _base.scss
+    │   ├── _typography.scss
+    │   ├── _animation.scss
+    │   └── _utilities.scss
+    └── components/
+    │    ├── _tooltip.scss
+    │    └── _form.scss
+    └── layout
+    │     └──_grid.scss
+    │
+    └── Pages
+    │       └──_home.scss
+    └── vendors
+    │       └──_anyVendorFile.scss
+    └── theme
+    │       └──_anyDarkTheme.scss
+    └── main.scss
+.gitignore
+README.md
+package.json
+</pre>
+            </div>
+            <h5 class="heading--5">
+                Description about sass folders
+            </h5>
+            <ul class="folder__list">
+                <li>
+                    <code>abstract/</code> - contains global mixins, functions, helper selectors, etc.
+                </li>
+                <li>
+                    <code>base/</code> - contains global styles, such as resets, typography, colors, etc.
+                </li>
+                <li>
+                    <code>components/</code> - contains each self-contained component in its own .scss partial
+                </li>
+                <li>
+                    <code>layout/</code> - contains styling for larger layout components; e.g. nav, header, footer, etc.
+                </li>
+                <li>
+                    <code>pages/</code> - contains page-specific styling, if necessary
+                </li>
+                <li>
+                    <code>themes/</code> - contains styling for different themes
+                </li>
+                <li>
+                    <code>vendors/</code> - contains 3rd-party styles, mixins, etc.
+                </li>
+                <li>
+                    <code>main.scss</code> - output file that brings together all of the above parts
+                </li>
+            </ul>
+
+        </section>
+        <section class="section-grid" id="grid">
+            <h4 class="heading-tertiary">
+                Grid
+            </h4>
+            <p class="paragraph">
+                We provide simple and responsive 4 column grid layout.
+            </p>
+
+            <h5 class="heading--5">
+                Col 1-of-2
+            </h5>
+            <code class="language-html">
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;
+                    row&quot;</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-2&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-2&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+            </code>
+            <div class="row grid-demo">
+                <div class="col-1-of-2">col-1-of-2</div>
+                <div class="col-1-of-2">col-1-of-2</div>
+            </div>
+
+            <h5 class="heading--5">
+                Col 1-of-3
+            </h5>
+            <code class="language-html">
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;
+                    row&quot;</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-3&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-3&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;
+                <span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-3&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+            </code>
+            <div class="row grid-demo">
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-1-of-3">col-1-of-3</div>
+            </div>
+            <h5 class="heading--5">
+                Col 1-of-4
+            </h5>
+            <code class="language-html">
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;
+                    row&quot;</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;
+                <span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;
+                <span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">
+                    &gt;</span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+            </code>
+            <div class="row grid-demo">
+                <div class="col-1-of-4">col-1-of-4</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+            </div>
+            <h5 class="heading--5">
+                Mixed Columns
+            </h5>
+
+            <code class="language-html">
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;row&quot;</span><span
+                    class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span>
+                <span class="token attr-value">class=&quot;col-1-of-2&quot;</span><span
+                    class="token tag">&gt;</span><span class="token tag">&lt;/div</span><span
+                    class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-2&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <!--                    Row no 2-->
+                <br/>
+                <br/>
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;row&quot;</span><span
+                    class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span>
+                <span class="token attr-value">class=&quot;col-1-of-3&quot;</span><span class="token tag">&gt;
+                </span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-2-of-4&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <!--                   row 3-->
+                <br/>
+                <span class="token tag">&lt;div</span> <span class="token attr-value">class=&quot;row&quot;</span><span
+                    class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span>
+                <span class="token attr-value">class=&quot;col-1-of-2&quot;</span><span class="token tag">&gt;
+                </span><span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>&nbsp;&nbsp;&nbsp;<span class="token tag">&lt;div</span> <span
+                    class="token attr-value">class=&quot;col-1-of-4&quot;</span><span class="token tag">&gt;</span><span
+                    class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+                <br/>
+                <span class="token tag">&lt;/div</span><span class="token tag">&gt;</span>
+            </code>
+            <div class="row grid-demo">
+                <div class="col-1-of-2">col-1-of-2</div>
+                <div class="col-1-of-2">col-1-of-2</div>
+            </div>
+            <div class="row grid-demo">
+                <div class="col-1-of-3">col-1-of-3</div>
+                <div class="col-2-of-3">col-2-of-3</div>
+            </div>
+            <div class="row grid-demo">
+                <div class="col-1-of-2">col-1-of-2</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+                <div class="col-1-of-4">col-1-of-4</div>
+            </div>
+        </section>
+        <section class="section-mixins" id="mixins">
+            <h3 class="heading-tertiary">Mixins</h3>
+            <p class="paragraph">
+                One of the most powerful features of the CSS preprocessor Sass is the mixin, an abstraction of a common
+                pattern into a semantic and reusable chunk
+            </p>
+            <ol class="mixin__list">
+                <li class="mixin__item">
+                    <h5 class="heading--5 mixin__heading">Pseudo</h5>
+                    <p class="paragraph mixin__text">
+                        When using <code class="mixin__code">::before</code> and <code class="mixin__code">::after
+                    </code> you'll always need these three, so we're saving three lines of code every time you use this.
+                    </p>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css"
+                       data-user="midnightgamer" data-slug-hash="RzwqYp"
+                       style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                       data-pen-title="RzwqYp">
+                    <span>See the Pen <a href="https://codepen.io/midnightgamer/pen/RzwqYp/">
+                            RzwqYp</a> by Pankaj Jaiswal (<a href="https://codepen.io/midnightgamer">@midnightgamer</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                </li>
+                <li class="mixin__item">
+                    <h5 class="heading--5 mixin__heading">
+                        Keyframes and Animation
+                    </h5>
+                    <p class="paragraph mixin__text">
+                        Quickly define animation properties and add them to your elements. Currently, the animation CSS
+                        property still needs vendor prefixes, so this will also add that to the mix.
+                    </p>
+
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+                       data-user="midnightgamer" data-slug-hash="OeJrgB"
+                       style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                       data-pen-title="OeJrgB">
+  <span>See the Pen <a href="https://codepen.io/midnightgamer/pen/OeJrgB/">
+  OeJrgB</a> by Pankaj Jaiswal (<a href="https://codepen.io/midnightgamer">@midnightgamer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                </li>
+                <li class="mixin__item">
+                    <h5 class="heading--5 mixin__heading">
+                        ADD VENDOR PREFIXES TO ANY CSS PROPERTY
+                    </h5>
+                    <p class="paragraph mixin__text">
+                        These days many web developers use PostCSS and Autoprefixer to add vendor prefixes to CSS
+                        properties that don’t come with sufficient browser support. However, there are still many
+                        developers who rather use Sass for that purpose. You can use the following mixin to add vendor
+                        prefixes to any CSS property
+                    </p>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result"
+                       data-user="midnightgamer" data-slug-hash="EBxBXz"
+                       style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                       data-pen-title="EBxBXz">
+                            <span>See the Pen <a href="https://codepen.io/midnightgamer/pen/EBxBXz/">
+                            EBxBXz</a> by Pankaj Jaiswal (<a href="https://codepen.io/midnightgamer">@midnightgamer</a>)
+                            on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </li>
+            </ol>
+        </section>
+        <section class="section-scripts" id="scripts">
+            <h3 class="heading-tertiary">
+                Npm Scripts
+            </h3>
+            <p class="paragraph">
+                NPM scripts are, well, scripts. We use scripts to automate repetitive tasks. For example, building your
+                project, minifying Cascading Style Sheets (CSS) and JavaScript (JS) files. Scripts are also used in
+                deleting temporary files and folders, etc,
+            </p>
+            <p class="paragraph paragraph--bold">
+                This Sass-boilerplate have some useful npm script that you need to work with sass or even with html
+                and css
+            </p>
+            <ol class="script__list">
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Web Server with Sass compilation
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply create Dev Server which reload on evey change and compile your all sass
+                        file when there is change in sass code
+                    </p>
+                    <code class="script__code">
+                        "start": "npm-run-all --parallel devserver watch:sass"
+                    </code>
+                    <p class="paragraph script__text">
+                        This script is made up of 2 other script i.e <span>deveserver</span> and <span>watch:sass</span>
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Compile sass
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply compile sass code to css only once , this script is useful if you closed
+                        your server and have to compile some sass only for once.
+                    </p>
+                    <code class="script__code">
+                        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+                    </code>
+                    <p class="paragraph script__text">
+                       <span>usage :</span> "compile:sass": "node-sass [input.scss] [output.css]",
+                    </p>
+                    <p class="paragraph">
+                        You guys can make changes in script according to your need.
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Auto Vendor Prefixer
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply take your compiled css file and add vendor prefixes as per our demand.
+                    </p>
+                    <code class="script__code">
+                        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+                    </code>
+                    <p class="paragraph script__text">
+                        <span>usage :</span> postcss [input.css] [OPTIONS] [-o|--output output.css]
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Compress CSS
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply take your chosen css file and minify it.
+                    </p>
+                    <code class="script__code">
+                        "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+                    </code>
+                    <p class="paragraph script__text">
+                        <span>usage :</span> node-sass [input.css]  [-o|--output output.css] [OPTIONS]
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Build
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script do all the task mention above in script section , It compile sass to css fist
+                        then add vendor prefixes then minify it all task with one script.
+                    </p>
+                    <code class="script__code">
+                        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+                    </code>
+                    <p class="paragraph script__text">
+                        New directory will create containing all your html , css and js.
+                        <span class="badge badge--feature">
+                           Coming soon
+                        </span>
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </main>
+</div>
+<div class="tooltip">
+    Code copied!
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
