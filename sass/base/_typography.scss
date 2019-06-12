@@ -1,6 +1,7 @@
 [class ^="heading"]{
     font-family: $font-family-heading;
     text-transform: uppercase;
+    margin: 1rem 0;
 }
 
 .heading-primary{
@@ -46,6 +47,10 @@
     font-size: 1.4rem;
     margin:1.5rem 0 .8rem 0;
     font-weight: 400;
+    line-height: 140%;
+    &--bold{
+        font-weight: 700;
+    }
 }
 
 .heading--4{

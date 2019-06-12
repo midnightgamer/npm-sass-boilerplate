@@ -60,6 +60,7 @@ code,
     &::selection{
         background: transparent;
     }
+
 }
 
 .section-how-to-start{
@@ -85,6 +86,7 @@ code,
 }
 
 .section-folder-structure{
+    padding: 6rem 0;
     .folder-stature{
         line-height: 120%;
         width: 80%;
@@ -101,6 +103,8 @@ code,
             font-size: 1.4rem;
             margin-right: 2rem;
             color: $color-primary;
+            width: 100px;
+            text-align: center;
         }
     }
 }
@@ -130,7 +134,7 @@ code,
 
 
 .section-mixins{
-
+    padding: 6rem 0;
     .mixin{
 
         &__list{
@@ -154,6 +158,35 @@ code,
             padding: .3rem .6rem;
             transform: translateX(0);
             margin: 0 .2rem;
+        }
+    }
+}
+
+.section-scripts{
+    padding: 6rem 0;
+    .script{
+
+        &__code{
+            margin-bottom: 0;
+            width: 80%;
+        }
+
+        &__list{
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: $font-family-text;
+        }
+
+        &__item{
+            margin: 4rem 0;
+        }
+
+        &__text{
+            span{
+                font-style: italic;
+                font-weight: 500;
+                margin-left: .3rem;
+            }
         }
     }
 }

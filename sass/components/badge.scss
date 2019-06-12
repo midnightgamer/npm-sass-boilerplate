@@ -1,0 +1,14 @@
+.badge{
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: .6rem .8rem;
+    border-radius: 5px;
+    display: inline-block;
+
+    &--feature{
+       background-image: linear-gradient(to right , $color-green , $color-green-light);
+        font-style: normal;
+        color: $color-white;
+    }
+}

@@ -156,7 +156,7 @@ package.json
             <h5 class="heading--5">
                 Description about sass folders
             </h5>
-            <ul>
+            <ul class="folder__list">
                 <li>
                     <code>abstract/</code> - contains global mixins, functions, helper selectors, etc.
                 </li>
@@ -384,6 +384,101 @@ package.json
                             on <a href="https://codepen.io">CodePen</a>.</span>
                     </p>
                     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </li>
+            </ol>
+        </section>
+        <section class="section-scripts">
+            <h3 class="heading-tertiary">
+                Npm Scripts
+            </h3>
+            <p class="paragraph">
+                NPM scripts are, well, scripts. We use scripts to automate repetitive tasks. For example, building your
+                project, minifying Cascading Style Sheets (CSS) and JavaScript (JS) files. Scripts are also used in
+                deleting temporary files and folders, etc,
+            </p>
+            <p class="paragraph paragraph--bold">
+                This Sass-boilerplate have some useful npm script that you need to work with sass or even with html
+                and css
+            </p>
+            <ol class="script__list">
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Web Server with Sass compilation
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply create Dev Server which reload on evey change and compile your all sass
+                        file when there is change in sass code
+                    </p>
+                    <code class="script__code">
+                        "start": "npm-run-all --parallel devserver watch:sass"
+                    </code>
+                    <p class="paragraph script__text">
+                        This script is made up of 2 other script i.e <span>deveserver</span> and <span>watch:sass</span>
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Compile sass
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply compile sass code to css only once , this script is useful if you closed
+                        your server and have to compile some sass only for once.
+                    </p>
+                    <code class="script__code">
+                        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+                    </code>
+                    <p class="paragraph script__text">
+                       <span>usage :</span> "compile:sass": "node-sass [input.scss] [output.css]",
+                    </p>
+                    <p class="paragraph">
+                        You guys can make changes in script according to your need.
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Auto Vendor Prefixer
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply take your compiled css file and add vendor prefixes as per our demand.
+                    </p>
+                    <code class="script__code">
+                        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+                    </code>
+                    <p class="paragraph script__text">
+                        <span>usage :</span> postcss [input.css] [OPTIONS] [-o|--output output.css]
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Compress CSS
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script simply take your chosen css file and minify it.
+                    </p>
+                    <code class="script__code">
+                        "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed"
+                    </code>
+                    <p class="paragraph script__text">
+                        <span>usage :</span> node-sass [input.css]  [-o|--output output.css] [OPTIONS]
+                    </p>
+                </li>
+                <li class="script__item">
+                    <h5 class="heading--5 script__heading">
+                        Build
+                    </h5>
+                    <p class="paragraph script__text">
+                        This script do all the task mention above in script section , It compile sass to css fist
+                        then add vendor prefixes then minify it all task with one script.
+                    </p>
+                    <code class="script__code">
+                        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+                    </code>
+                    <p class="paragraph script__text">
+                        New directory will create containing all your html , css and js.
+                        <span class="badge badge--feature">
+                           Coming soon
+                        </span>
+                    </p>
                 </li>
             </ol>
         </section>

@@ -23,7 +23,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #fdfdfd;
   height: 100vh; }
 
 main {
@@ -31,7 +31,8 @@ main {
 
 [class^="heading"] {
   font-family: "Yatra One", cursive;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 1rem 0; }
 
 .heading-primary {
   font-size: 3rem;
@@ -45,7 +46,7 @@ main {
     font-family: "Yatra One", cursive;
     margin: 2.5rem 0; }
   .heading-primary--grey {
-    color: #F2F2F2; }
+    color: #fdfdfd; }
 
 .heading-secondary {
   font-size: 3rem;
@@ -67,7 +68,10 @@ main {
   font-family: "Barlow", sans-serif;
   font-size: 1.4rem;
   margin: 1.5rem 0 .8rem 0;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 140%; }
+  .paragraph--bold {
+    font-weight: 700; }
 
 .heading--4 {
   font-family: "Barlow", sans-serif;
@@ -111,7 +115,7 @@ main {
     padding: 1.2rem 1.6rem;
     width: 300px;
     color: #291843;
-    background-color: #F2F2F2;
+    background-color: #fdfdfd;
     font-size: 2rem;
     margin: 1.5rem 0; }
     .btn-primary--with-icon i {
@@ -181,7 +185,7 @@ main {
 
 .tooltip {
   background-color: #000;
-  color: #F2F2F2;
+  color: #fdfdfd;
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
   font-family: "Barlow", sans-serif;
@@ -193,6 +197,18 @@ main {
   bottom: 16rem;
   animation: moveInUp 1s ease;
   display: none; }
+
+.badge {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: .6rem .8rem;
+  border-radius: 5px;
+  display: inline-block; }
+  .badge--feature {
+    background-image: linear-gradient(to right, #55c57a, #7ed56f);
+    font-style: normal;
+    color: #fff; }
 
 .row {
   max-width: 114rem;
@@ -236,7 +252,7 @@ main {
 
 .footer {
   padding: 3rem 0;
-  background-color: #F2F2F2; }
+  background-color: #fdfdfd; }
   .footer .row {
     display: flex;
     justify-content: space-between; }
@@ -329,7 +345,7 @@ main {
   background-color: #291843; }
 
 .version {
-  color: #F2F2F2;
+  color: #fdfdfd;
   font-family: "Barlow", sans-serif; }
   .version__list {
     margin-left: 8rem;
@@ -362,15 +378,15 @@ main {
     font-size: 1.6rem;
     text-transform: uppercase;
     font-family: "Yatra One", cursive;
-    color: #F2F2F2;
+    color: #fdfdfd;
     transition: all .5s ease; }
   .header__link i {
     font-size: 1.6rem;
-    color: #F2F2F2;
+    color: #fdfdfd;
     transition: all .5s ease; }
   .header__link:hover, .header__link:focus,
   .header__link:hover i {
-    color: rgba(242, 242, 242, 0.4); }
+    color: rgba(253, 253, 253, 0.4); }
 
 .row-flex {
   display: flex; }
@@ -403,20 +419,23 @@ code,
     .section-how-to-start button:hover {
       background-color: #e7e7e7; }
 
-.section-folder-structure .folder-stature {
-  line-height: 120%;
-  width: 80%; }
-
-.section-folder-structure ul {
-  list-style: none; }
-  .section-folder-structure ul li {
-    font-size: 1.3rem;
-    font-family: "Barlow", sans-serif; }
-  .section-folder-structure ul code {
-    padding: 1rem;
-    font-size: 1.4rem;
-    margin-right: 2rem;
-    color: #291843; }
+.section-folder-structure {
+  padding: 6rem 0; }
+  .section-folder-structure .folder-stature {
+    line-height: 120%;
+    width: 80%; }
+  .section-folder-structure ul {
+    list-style: none; }
+    .section-folder-structure ul li {
+      font-size: 1.3rem;
+      font-family: "Barlow", sans-serif; }
+    .section-folder-structure ul code {
+      padding: 1rem;
+      font-size: 1.4rem;
+      margin-right: 2rem;
+      color: #291843;
+      width: 100px;
+      text-align: center; }
 
 .language-html {
   font-size: 1.6rem;
@@ -438,19 +457,34 @@ code,
     font-size: 1.4rem;
     font-family: "Barlow", sans-serif; }
 
-.section-mixins .mixin__list {
-  margin-left: 2rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  font-family: "Barlow", sans-serif; }
+.section-mixins {
+  padding: 6rem 0; }
+  .section-mixins .mixin__list {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "Barlow", sans-serif; }
+  .section-mixins .mixin__item:not(:last-child) {
+    margin-bottom: 4rem; }
+  .section-mixins .mixin__text {
+    margin-bottom: 1rem; }
+  .section-mixins .mixin__code {
+    padding: .3rem .6rem;
+    transform: translateX(0);
+    margin: 0 .2rem; }
 
-.section-mixins .mixin__item:not(:last-child) {
-  margin-bottom: 4rem; }
-
-.section-mixins .mixin__text {
-  margin-bottom: 1rem; }
-
-.section-mixins .mixin__code {
-  padding: .3rem .6rem;
-  transform: translateX(0);
-  margin: 0 .2rem; }
+.section-scripts {
+  padding: 6rem 0; }
+  .section-scripts .script__code {
+    margin-bottom: 0;
+    width: 80%; }
+  .section-scripts .script__list {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: "Barlow", sans-serif; }
+  .section-scripts .script__item {
+    margin: 4rem 0; }
+  .section-scripts .script__text span {
+    font-style: italic;
+    font-weight: 500;
+    margin-left: .3rem; }
