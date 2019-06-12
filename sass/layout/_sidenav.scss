@@ -2,12 +2,24 @@
     position:-webkit-sticky;
     position:sticky;
     top: 0;
+    min-height:fit-content;
     max-height: fit-content;
     width: 28%;
     padding: 0 1rem;
+    @include clearFix();
+
+    @include respond(phone){
+        width: 100%;
+    }
     &__list{
         list-style: none;
         margin: 1rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(phone){
+            display: none;
+        }
     }
 
     &__item{
@@ -36,4 +48,40 @@
     background-color: #e7e7e7;
     border-radius: 3px;
     transform: translateX(4px);
+}
+
+.navigation-toggler{
+    display: none;
+    @include respond(phone){
+        display: block;
+        position: relative;
+    }
+    .toogle-btn{
+        border-bottom: 1px solid $color-black;
+        width: 3rem;
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        &::before{
+            display: inline-block;
+            content: "";
+            border-bottom: 1px solid $color-black;
+            width: 3rem;
+            position: absolute;
+            top:-.8rem;
+        }
+        &::after{
+            display: inline-block;
+            content: "";
+            border-bottom: 1px solid $color-black;
+            width: 3rem;
+            position: absolute;
+            top: .8rem;
+        }
+    }
+
+    &:hover{
+        transform: scale(2);
+    }
+    background: #2998ff;
 }

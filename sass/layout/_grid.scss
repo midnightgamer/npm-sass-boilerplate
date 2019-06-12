@@ -19,11 +19,9 @@ $gutter-horizontal:6rem;
         @include respond(tab-port){
             margin-bottom: $gutter-vertical-small;
         }
+
     }
-    @include respond(tab-port){
-        max-width: 50rem;
-        padding: 0 2rem;
-    }
+
 
     @include clearFix();
     [class^="col-"]{

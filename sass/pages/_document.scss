@@ -1,3 +1,17 @@
+.row-flex{
+    display: flex;
+    @include respond(phone){
+        flex-direction: column;
+    }
+}
+.section-hero{
+    .heading-primary{
+        background-image: linear-gradient(to right ,lighten($color-primary,.6),$color-secondary);
+        color: transparent!important;
+        -webkit-background-clip: text;
+    }
+}
+
 .header {
     background-color: $color-primary;
     width: 100%;
@@ -42,10 +56,6 @@
     }
 }
 
-.row-flex{
-    display: flex;
-
-}
 
 code,
 .folder-stature{
