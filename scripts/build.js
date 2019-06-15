@@ -1,9 +1,8 @@
-
 const fs = require('fs-extra');
 const dir = 'src';
 
 try {
-    if (!fs.existsSync(dir)){
+    if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir)
     }
 } catch (err) {
@@ -11,11 +10,11 @@ try {
 }
 
 try {
-    fs.copy('index.html','src/index.html',function (err) {
-        if (!err){
+    fs.copy('index.html', 'src/index.html', function (err) {
+        if (!err) {
             console.log("Success")
         }
     });
-}catch (e) {
+} catch (e) {
     console.log(e)
 }

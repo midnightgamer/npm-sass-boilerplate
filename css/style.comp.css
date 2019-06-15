@@ -1,73 +1,32 @@
-.row {
-  max-width: 114rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-    @media screen and (max-width: 56.25rem) {
-      .row:not(:last-child) {
-        margin-bottom: 6rem; } }
+/*Media query mixin*/
+/*
+Use for pseudo code
+*/
+/*Uses for keyframe*/
+/*Uses for animation*/
+/*CSS PREFIX*/
+/*Center content vertically*/
+.u-center-text {
+  text-align: center; }
+
+.u-mb-huge {
+  margin-bottom: 10rem; }
+
+.u-mb-big {
+  margin-bottom: 8rem; }
   @media screen and (max-width: 56.25rem) {
-    .row {
-      max-width: 50rem;
-      padding: 0 2rem; } }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-      @media screen and (max-width: 56.25rem) {
-        .row [class^="col-"]:not(:last-child) {
-          margin-right: 0;
-          margin-bottom: 6rem; } }
-    @media screen and (max-width: 56.25rem) {
-      .row [class^="col-"] {
-        width: 100% !important; } }
-  .row .col-1-of-2 {
-    width: calc((100%  - 6rem)/2); }
-  .row .col-1-of-3 {
-    width: calc((100%  - 2 * 6rem)/3); }
-  .row .col-2-of-3 {
-    width: calc(2*((100%  - 2 * 6rem)/3) + 6rem); }
-  .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem)/4); }
-  .row .col-2-of-4 {
-    width: calc(2*((100% - 3 * 6rem)/4) + 6rem); }
-  .row .col-3-of-4 {
-    width: calc(3*((100% - 3 * 6rem)/4) + 2*6rem); }
+    .u-mb-big {
+      margin-bottom: 5rem; } }
 
-/*
-When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
-*/
-/*
-Uses
+.u-mb-medium {
+  margin-bottom: 4rem; }
+  @media screen and (max-width: 56.25rem) {
+    .u-mb-medium {
+      margin-bottom: 3rem; } }
 
-// Define animation name, and properties
-@include keyframes(fade-out) {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-}
-// Add animation to element
-.element {
-  width: 100px;
-  height: 100px;
-  background: black;
-  @include animation('fade-out 5s 3');
-}
-*/
-/*
-USES
-div {
-   @include css3-prefix(transform, scale3d(2.5, 2, 1.5));
-*/
-/*
-Uses
-div {
-   @include vertical-center();
-}
-*/
+.u-mb-small {
+  margin-bottom: 1.5rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
