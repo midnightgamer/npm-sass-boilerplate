@@ -24,6 +24,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
+    "clean-css": "^4.2.1",
     "concat": "^1.0.3",
     "globby": "^9.2.0",
     "live-server": "^1.2.1",
