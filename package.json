@@ -25,6 +25,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
+    "globby": "^9.2.0",
     "live-server": "^1.2.1",
     "minify-all": "^1.2.2",
     "node-sass": "^4.5.3",
