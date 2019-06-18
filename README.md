@@ -1,4 +1,4 @@
-# [Sass Boilerplate](https://midnightgamer.github.io/sass-boilerplate/) 
+# [Sass Boilerplate](https://midnightgamer.github.io/sass-boilerplate/)  &middot;  
 
 
 This is a very basic starting point for new web project with  **sass**. It takes no assumptions about your tech stack 
