@@ -60,37 +60,3 @@ try{
 catch (e) {
     console.log(e.message)
 }
-
-try {
-    if (!fs.existsSync(Srcdir)) {
-        fs.mkdirSync(Srcdir);
-
-        //Concat All files from css directory to one css file
-        // globby(['css/*.css', '!node_modules']).then(paths => {
-        //     concat(paths).then(result =>
-        //         fs.outputFile('src/css/style.css', result, function(err) {
-        //             console.log(err); //null
-        //             var minifiedCSS = new CleanCSS().minify(result);
-        //            console.log(minifiedCSS.styles);
-        //
-        //            fs.outputFile('src/css/style.min.css',minifiedCSS.styles,function (e) {
-        //                console.log(e)
-        //            })
-        //         }),
-        //     )
-        // });
-
-        //TODO Working postCSS Autoprefixer
-
-        // var cssString = 'background-image: linear-gradient(to right,orange,green);'
-        //
-        // postcss([ autoprefixer ]).process(cssString).then(result => {
-        //     result.warnings().forEach(warn => {
-        //         console.warn(warn.toString())
-        //     })
-        //     console.log(result.css)
-        // })
-    }
-} catch (err) {
-    console.error(err)
-}

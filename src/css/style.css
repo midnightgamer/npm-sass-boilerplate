@@ -16,3 +16,8 @@ pattern{
     -webkit-transition: 1s;
     transition: 1s; /* will be prefixed */
 }
+
+
+html{
+    border-radius: 5px;
+}

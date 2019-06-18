@@ -10,3 +10,8 @@ pattern{
 .a {
     transition: 1s; /* will be prefixed */
 }
+
+
+html{
+    border-radius: 5px;
+}

@@ -6,11 +6,9 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "node scripts/start.js",
-    "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css src/style.min.css --output-style compressed",
-    "build": "npm-run-all compile:sass prefix:css make:dir compress:css "
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "build": "node scripts/build.js "
   },
   "repository": {
     "type": "git",
@@ -28,11 +26,14 @@
     "concat": "^1.0.3",
     "globby": "^9.2.0",
     "live-server": "^1.2.1",
-    "minify-all": "^1.2.2",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
   },
+  "dependencies": {
+
+  },
+  ies
   "bugs": {
     "url": "https://github.com/midnightgamer/sass-boilerplate/issues"
   },
