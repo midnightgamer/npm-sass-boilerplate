@@ -1,6 +1,5 @@
 const fs = require('fs-extra');
 const globby = require('globby');
-// const compressor = require('node-minify');
 const concat = require('concat');
 var CleanCSS = require('clean-css');
 const autoprefixer = require('autoprefixer');
@@ -42,17 +41,17 @@ try {
                 }),
             )
         });
-    //TODO Prefixadder
 
-    //    Adding Prefixes
-    //     const css = cssFile+'/style.css';
-    //     console.log(css)
-    //     postcss([ autoprefixer ]).process(css).then(result => {
-    //         result.warnings().forEach(warn => {
-    //             console.warn(warn.toString())
-    //         })
-    //         console.log(result.css)
-    //     })
+        //TODO Working postCSS Autoprefixer
+
+        // var cssString = 'background-image: linear-gradient(to right,orange,green);'
+        //
+        // postcss([ autoprefixer ]).process(cssString).then(result => {
+        //     result.warnings().forEach(warn => {
+        //         console.warn(warn.toString())
+        //     })
+        //     console.log(result.css)
+        // })
     }
 } catch (err) {
     console.error(err)
