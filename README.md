@@ -1,4 +1,5 @@
-# Sass Boilerplate
+# [Sass Boilerplate](https://midnightgamer.github.io/sass-boilerplate/)  &middot;  
+
 
 This is a very basic starting point for new web project with  **sass**. It takes no assumptions about your tech stack 
 and there is no binding to any javascript frameworks or backend systems.
