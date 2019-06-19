@@ -42,10 +42,14 @@ try{
                 console.log('\x1b[32m%s\x1b[0m', 'Transferring your all file to src....');
             }
         });
+        var source = 'assets/';
+        fs.copy(source,'src/assets',function (e) {
+            console.log(e)
+        });
 
         globby(['css/*.css','!node_modules']).then(paths =>{
             concat(paths).then(result =>{
-                postcss([ autoprefixer ]).process(result).then(preFixed => {
+                postcss([ autoprefixer ]).process(result,{map:{inline:false}}).then(preFixed => {
                     preFixed.warnings().forEach(warn => {
                         console.warn(warn.toString())
                     });
