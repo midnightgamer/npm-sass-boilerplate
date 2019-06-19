@@ -28,12 +28,11 @@
     "live-server": "^1.2.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "postcss-cli": "^4.1.1",
+    "uglify-es": "^3.3.9",
+    "uglify-js": "^3.6.0"
   },
-  "dependencies": {
-
-  },
-  ies
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/midnightgamer/sass-boilerplate/issues"
   },

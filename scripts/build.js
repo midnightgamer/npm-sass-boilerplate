@@ -4,10 +4,11 @@ const concat = require('concat');
 var CleanCSS = require('clean-css');
 const autoprefixer = require('autoprefixer');
 const postcss = require('postcss');
+var UglifyJS = require("uglify-es");
 
 const Srcdir = 'src';
 const cssFile = Srcdir+'/css';
-const jsFile = Srcdir+'/js';
+const jsFile = Srcdir +'/js';
 
 try {
     //Create new Src directory if not created
@@ -53,6 +54,13 @@ try{
                     fs.outputFile(cssFile+'/style.min.css',minifedCSS.styles);
                 });
 
+            });
+        });
+        globby(['js/*.js','!node_modules']).then(paths =>{
+            concat(paths).then(result =>{
+                fs.outputFile(jsFile+'/script.js',result);
+                var minfifiedJs = UglifyJS.minify(result);
+                fs.outputFile(jsFile+'/script.min.js',minfifiedJs.code);
             });
         })
     }
